@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gxb-vH-sik">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Сообщения-->
+        <scene sceneID="yKW-T8-G5f">
+            <objects>
+                <viewController id="VNs-G7-q7L" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wn1-PU-XW9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GlZ-vp-3Aq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MDU-Hq-GDR"/>
+                        <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                        <constraints>
+                            <constraint firstItem="GlZ-vp-3Aq" firstAttribute="leading" secondItem="MDU-Hq-GDR" secondAttribute="leading" id="Ig2-PA-jWg"/>
+                            <constraint firstItem="GlZ-vp-3Aq" firstAttribute="trailing" secondItem="MDU-Hq-GDR" secondAttribute="trailing" id="bFA-ls-G5G"/>
+                            <constraint firstItem="GlZ-vp-3Aq" firstAttribute="bottom" secondItem="MDU-Hq-GDR" secondAttribute="bottom" id="czI-wj-tQt"/>
+                            <constraint firstItem="GlZ-vp-3Aq" firstAttribute="top" secondItem="wn1-PU-XW9" secondAttribute="top" id="xcN-pW-aeY"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Сообщения" image="message.fill" catalog="system" id="IVM-oA-jUj"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XFm-e7-h4Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1489.8550724637682" y="346.875"/>
+        </scene>
+        <!--Главная-->
+        <scene sceneID="jJD-6z-ki8">
+            <objects>
+                <viewController id="IpQ-Ze-2Ly" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5nc-yJ-jFN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="zvA-Xc-R1B"/>
+                        <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Главная" image="homekit" catalog="system" id="3RC-U5-NQA"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jfx-ef-ycz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1490" y="-328"/>
+        </scene>
+        <!--Base Viev Storyboard-->
+        <scene sceneID="fjE-TU-Bcx">
+            <objects>
+                <tabBarController modalPresentationStyle="fullScreen" id="gxb-vH-sik" customClass="BaseVievStoryboard" customModule="Weather_v2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="18d-3v-W9J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="IpQ-Ze-2Ly" kind="relationship" relationship="viewControllers" id="D4m-I3-kwb"/>
+                        <segue destination="VNs-G7-q7L" kind="relationship" relationship="viewControllers" id="x9k-z1-vdp"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JUM-1r-onv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="601" y="44"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="message.fill" catalog="system" width="128" height="113"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
