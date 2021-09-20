@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fsm-2h-vYI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Сообщения-->
+        <scene sceneID="6Fn-lc-G2g">
+            <objects>
+                <viewController id="fsm-2h-vYI" customClass="FriendsViewController" customModule="Weather_v2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q7p-F6-mwS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vVz-ub-7BB">
+                                <rect key="frame" x="0.0" y="94" width="414" height="719"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сообщения" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5c-AX-sfg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <color key="textColor" red="0.17410151730000001" green="0.92173405279999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Bl-ij-29p"/>
+                        <color key="backgroundColor" systemColor="separatorColor"/>
+                        <constraints>
+                            <constraint firstItem="vVz-ub-7BB" firstAttribute="centerX" secondItem="Q7p-F6-mwS" secondAttribute="centerX" id="2VC-Fe-sNu"/>
+                            <constraint firstItem="6Bl-ij-29p" firstAttribute="bottom" secondItem="vVz-ub-7BB" secondAttribute="bottom" id="AYk-S5-eaf"/>
+                            <constraint firstItem="X5c-AX-sfg" firstAttribute="top" secondItem="6Bl-ij-29p" secondAttribute="top" id="QKQ-YA-hYJ"/>
+                            <constraint firstItem="vVz-ub-7BB" firstAttribute="top" secondItem="6Bl-ij-29p" secondAttribute="top" constant="50" id="R04-rT-9b2"/>
+                            <constraint firstItem="6Bl-ij-29p" firstAttribute="trailing" secondItem="vVz-ub-7BB" secondAttribute="trailing" id="kUo-J0-mRR"/>
+                            <constraint firstItem="X5c-AX-sfg" firstAttribute="leading" secondItem="6Bl-ij-29p" secondAttribute="leading" id="p0e-Mi-4N3"/>
+                            <constraint firstItem="6Bl-ij-29p" firstAttribute="trailing" secondItem="X5c-AX-sfg" secondAttribute="trailing" id="sJB-cZ-6AM"/>
+                            <constraint firstItem="vVz-ub-7BB" firstAttribute="leading" secondItem="6Bl-ij-29p" secondAttribute="leading" id="tkJ-e0-V0h"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Сообщения" image="person.3" catalog="system" id="xu8-un-kPe">
+                        <color key="badgeColor" systemColor="separatorColor"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="TableView" destination="vVz-ub-7BB" id="R9x-NC-h3n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1yc-OU-PhO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="391" y="191"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.3" catalog="system" width="128" height="62"/>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
